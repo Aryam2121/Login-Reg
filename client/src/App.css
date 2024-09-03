@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #cbdbff;
+}
+
+/* Form Container */
+.form-container {
+  width: 100%;
+  max-width: 1000px;
+  padding: 40px;
+  background-color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Typography */
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.slogan {
+  font-size: 16px;
+  font-weight: 400;
+  color: #888;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  border-radius: 8px;
+  height: 45px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Image Styling */
+.auth-image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Ant Design Customization */
+.ant-input,
+.ant-select-selector,
+.ant-input-password {
+  height: 45px;
+  border-radius: 8px;
+  border: 1px solid #d9d9d9;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.ant-btn-primary {
+  background-color: #1890ff;
+  border-color: #1890ff;
+}
+
+.ant-btn-primary:hover {
+  background-color: #40a9ff;
+  border-color: #40a9ff;
+}
+
+.ant-form-item-label > label {
+  font-weight: 500;
+  color: #555;
+}
+
+.alert {
+  margin-bottom: 1.5rem;
+}
+
+/* New styles specific to the Login page */
+
+/* Adjusting for any potential differences between login and register */
+.login-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-slogan {
+  font-size: 16px;
+  font-weight: 400;
+  color: #888;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Login button spinner adjustment */
+.login-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
