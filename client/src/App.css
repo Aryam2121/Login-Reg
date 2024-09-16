@@ -23,23 +23,24 @@ body {
   background-color: #fff;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  display: flex; /* Flexbox for responsiveness */
+  flex-direction: column; /* Stack children vertically */
+  gap: 20px; /* Space between elements */
 }
 
 /* Typography */
 .title {
-  font-size: 28px;
+  font-size: 2rem; /* Responsive font size */
   font-weight: 600;
   color: #333;
   text-align: center;
-  margin-bottom: 20px;
 }
 
 .slogan {
-  font-size: 16px;
+  font-size: 1rem; /* Responsive font size */
   font-weight: 400;
   color: #888;
   text-align: center;
-  margin-bottom: 30px;
 }
 
 /* Button */
@@ -88,22 +89,18 @@ body {
 }
 
 /* New styles specific to the Login page */
-
-/* Adjusting for any potential differences between login and register */
 .login-title {
-  font-size: 28px;
+  font-size: 2rem; /* Responsive font size */
   font-weight: 600;
   color: #333;
   text-align: center;
-  margin-bottom: 20px;
 }
 
 .login-slogan {
-  font-size: 16px;
+  font-size: 1rem; /* Responsive font size */
   font-weight: 400;
   color: #888;
   text-align: center;
-  margin-bottom: 30px;
 }
 
 /* Login button spinner adjustment */
@@ -111,4 +108,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Responsive Design Enhancements */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 20px; /* Less padding on smaller screens */
+  }
+
+  .title, .slogan {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
 }

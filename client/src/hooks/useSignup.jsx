@@ -8,17 +8,17 @@ const useSignup = () => {
   const [loading, setLoading] = useState(false);
 
   const registerUser = async (values) => {
-    // Check if passwords match
+    setError(null); // Clear existing error
+
     if (values.password !== values.passwordConfirm) {
       setError("Passwords do not match");
       return;
     }
 
     try {
-      setError(null);
       setLoading(true);
 
-      const res = await fetch("http://localhost:8000/api/auth/register", {
+      const res = await fetch("http://localhost:8000/admin/register", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -30,7 +30,11 @@ const useSignup = () => {
 
       if (res.status === 201) {
         message.success(data.message);
-        login(data.token, data.user);
+        if (data.token && data.user) {
+          login(data.token, data.user);
+        } else {
+          throw new Error("Invalid response format");
+        }
       } else if (res.status === 400) {
         setError(data.message);
       } else {
@@ -43,7 +47,7 @@ const useSignup = () => {
     }
   };
 
-  return { loading, error, registerUser };
+  return { loading, error, registerUser, clearError: () => setError(null) };
 };
 
 export default useSignup;

@@ -27,7 +27,7 @@ const Login = () => {
   return (
     <Card className='form-container'>
       <Row gutter={[32, 32]}>
-        <Col span={12}>
+        <Col xs={24} sm={24} md={12}>
           <Typography.Title level={3} strong className='title'>
             Login to Your Account
           </Typography.Title>
@@ -49,9 +49,7 @@ const Login = () => {
             <Form.Item
               label="Password"
               name="password"
-              rules={[
-                { required: true, message: "Please input your Password!" },
-              ]}
+              rules={[{ required: true, message: "Please input your Password!" }]}
             >
               <Input.Password size='large' placeholder='Enter your Password' />
             </Form.Item>
@@ -89,8 +87,7 @@ const Login = () => {
           </Form>
         </Col>
 
-        {/* Image section */}
-        <Col span={12}>
+        <Col xs={24} sm={24} md={12}>
           <img src={loginImage} alt="Login" className='auth-image' />
         </Col>
       </Row>
